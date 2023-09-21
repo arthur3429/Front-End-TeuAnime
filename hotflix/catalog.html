@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Animes</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="dashboard.css">
+	<link rel="shortcut icon" href="IMG/favicon-32x32.png" type="image/x-icon">
+  </head>
+  <body onload="catalog()"> 
+		<div class="popup1">
+			<div class="popup-overlay"></div>
+			<div class="popup-container">
+			<h2>Você tem certeza?</h2>
+			<span>As mudanças serão aplicadas imediatamente.</span>
+			<div class="popup-buttons">
+				<button style="border: 2px solid #00dffb; background-color:  #00dffb;">Aplicar</button>
+				<button style="background-color: #141C25;" id="dismiss">Cancelar</button>
+			</div>
+			</div>
+	 	</div>			  
+		<div class="popup2">
+			<div class="popup2-overlay"></div>
+			<div class="popup-container" id="pc2">
+			   <h2>Deseja deletar esse item?</h2>
+			   <span>Essa ação não pode ser revertida.</span>
+			   <div class="popup-buttons">
+				  <button style="background-color:  #eb5757;">Sim</button>
+				  <button style="background-color: #141C25;" id="dismiss2">Não</button>
+			   </div>
+			</div>
+		 </div>
+		 <header>
+			<div class="logo">
+			  <a href="../teuanime.com/index.html">
+				<img src="IMG/logo.png" alt="TEUANIME" style="width: 150px" />
+			  </a>
+			</div>
+			<div class="menu">
+			  <ion-icon name="menu" size="large"></ion-icon>
+			</div>
+		  </header>
+		  <div class="sidebar">
+			<div class="logo">
+			  <a href="../teuanime.com/index.html">
+				<img src="IMG/logo.png" alt="TEUANIME" style="width: 150px" />
+			  </a>
+			</div>
+			<div class="user-sidebar">
+			  <ion-icon name="person-outline" style="
+			  color: white;
+			  background-color: #212027;
+			  padding: 8px;
+			  border-radius: 5px;
+			"></ion-icon>
+			  <div class="title-user-sidebar">
+				<span>Admin</span>
+				<p>Keraunos</p>
+			  </div>
+			  <button>
+				<ion-icon name="log-out-outline"></ion-icon>
+			  </button>
+			</div>
+			<div class="container-sidebar" style="overflow-y: auto;">
+			  <div class="sidebar-container">
+				<ul>
+				  <li class="sidebar-nav-item">
+					<a href="catalog.html" style="color: #00dffb">
+					  <ion-icon name="film"></ion-icon>
+					  <span>CATÁLOGO</span>
+					</a>
+				  </li>
+				  <li class="sidebar-nav-item"> 
+					<a href="add-item.html">
+					  <ion-icon name="add-circle-outline"></ion-icon>
+					  <span>ADICIONAR ANIME</span>
+					</a>
+				  </li>
+	  
+				  <li class="sidebar-nav-item">
+					<a href="../teuanime.com/index.html">
+					  <ion-icon name="arrow-back"></ion-icon>
+					  <span>RETORNAR AO SITE</span>
+					</a>
+				  </li>
+				</ul>
+			  </div>
+			</div>
+			<div class="credits">
+			  <p>&copy; TEUANIME, 2022.</p>
+			  
+			</div>
+		  </div>
+
+    <main>
+      <div class="catalog">
+        <div class="topo">
+          <div class="left-top">
+            <h2>Catálogo de Animes</h2>
+            <span>138 no Total</span>
+          </div>
+          <div class="right-top">
+            <!-- <div class="sort-by">
+              <span>Sort by:</span>
+              <p class="dropdown">Date created </p>
+			  <div class="dropdown-content">
+				  <a href="#" id="link1">Date created</a>
+				  <a href="#" id="link2">Rating</a>
+				  <a href="#" id="link3">Views</a>
+			  </div>
+            </div> -->
+            <input type="text" placeholder="Pesquisar animes...">
+          </div>
+        </div>
+
+
+			<div class="div-table">
+				<table class="main-table">
+					<thead>
+						<tr>
+							<th>ID</th>
+							<th>TÍTULO</th>
+							<th>CLASSIFICAÇÃO</th>
+							<th>CATEGORIA</th>
+							<th>VISUALIZAÇÕES</th>
+							<th>STATUS</th>
+							<th>DATA DE CRIAÇÃO</th>
+							<th>AÇÕES</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<div style="border-radius:6px 0px 0px 6px ;" class="table-text">23</div>
+							</td>
+							<td>
+								<div class="table-text"><a href="edit-user.html">Overlord IV</a></div>
+							</td>
+							<td>
+								<div class="table-text"><ion-icon name="star" style="color: #f9ab00; font-size: 16px; margin-right: 5px;"></ion-icon> 8.4</div>
+							</td>
+							<td>
+								<div class="table-text">Anime</div>
+							</td>
+							<td>
+								<div class="table-text">1392</div>
+							</td>
+							<td>
+								<div class="table-text table-text--green">Online</div>
+							</td>
+							<td>
+								<div class="table-text">24 Out 2022</div>
+							</td>
+							<td>
+								<div class="main-table-buttons table-text" >
+									<a href="#" class="main-table-button main-table-button--banned">
+										<ion-icon name="lock-closed" style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--view">
+										<ion-icon name="eye-sharp"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--edit">
+										<ion-icon name="create"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--delete">
+										<ion-icon name="trash"  style="font-size: 16px;"></ion-icon>
+									</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="table-text" style="border-radius:6px 0px 0px 6px ;">24</div>
+							</td>
+							<td>
+								<div class="table-text"><a href="edit-user.html">Naruto Clássico</a></div>
+							</td>
+							<td>
+								<div class="table-text"><ion-icon name="star" style="color: #f9ab00; font-size: 16px; margin-right: 5px;"></ion-icon> 7.1</div>
+							</td>
+							<td>
+								<div class="table-text">Anime</div>
+							</td>
+							<td>
+								<div class="table-text">193</div>
+							</td>
+							<td>
+								<div class="table-text table-text--red">Offine</div>
+							</td>
+							<td>
+								<div class="table-text">24 Out 2022</div>
+							</td>
+							<td>
+								<div class="main-table-buttons table-text">
+									<a href="#" class="main-table-button main-table-button--banned">
+										<ion-icon name="lock-closed" style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--view">
+										<ion-icon name="eye-sharp"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--edit">
+										<ion-icon name="create"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--delete">
+										<ion-icon name="trash"  style="font-size: 16px;"></ion-icon>
+									</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="table-text" style="border-radius:6px 0px 0px 6px ;">25</div>
+							</td>
+							<td>
+								<div class="table-text"><a href="edit-user.html">DanMachi IV</a></div>
+							</td>
+							<td>
+								<div class="table-text"><ion-icon name="star" style="color: #f9ab00; font-size: 16px; margin-right: 5px;"></ion-icon> 5.4</div>
+							</td>
+							<td>
+								<div class="table-text">Anime</div>
+							</td>
+							<td>
+								<div class="table-text">723</div>
+							</td>
+							<td>
+								<div class="table-text table-text--green">Online</div>
+							</td>
+							<td>
+								<div class="table-text">24 Out 2022</div>
+							</td>
+							<td>
+								<div class="main-table-buttons table-text">
+									<a href="#" class="main-table-button main-table-button--banned">
+										<ion-icon name="lock-closed" style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--view">
+										<ion-icon name="eye-sharp"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--edit">
+										<ion-icon name="create"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--delete">
+										<ion-icon name="trash"  style="font-size: 16px;"></ion-icon>
+									</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="table-text" style="border-radius:6px 0px 0px 6px ;">26</div>
+							</td>
+							<td>
+								<div class="table-text"><a href="edit-user.html">Chainsaw Man</a></div>
+							</td>
+							<td>
+								<div class="table-text"><ion-icon name="star" style="color: #f9ab00; font-size: 16px; margin-right: 5px;"></ion-icon> 8.6</div>
+							</td>
+							<td>
+								<div class="table-text">Anime</div>
+							</td>
+							<td>
+								<div class="table-text">2457</div>
+							</td>
+							<td>
+								<div class="table-text table-text--green">Online</div>
+							</td>
+							<td>
+								<div class="table-text">24 Out 2022</div>
+							</td>
+							<td>
+								<div class="main-table-buttons table-text">
+									<a href="#" class="main-table-button main-table-button--banned">
+										<ion-icon name="lock-closed" style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--view">
+										<ion-icon name="eye-sharp"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--edit">
+										<ion-icon name="create"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--delete">
+										<ion-icon name="trash"  style="font-size: 16px;"></ion-icon>
+									</a>
+								</div>
+							</td>
+						</tr><tr>
+							<td>
+								<div class="table-text" style="border-radius:6px 0px 0px 6px ;">27</div>
+							</td>
+							<td>
+								<div class="table-text"><a href="edit-user.html">Aharen-san wa Hakarenai</a></div>
+							</td>
+							<td>
+								<div class="table-text"><ion-icon name="star" style="color: #f9ab00; font-size: 16px; margin-right: 5px;"></ion-icon> 6.5</div>
+							</td>
+							<td>
+								<div class="table-text">Anime</div>
+							</td>
+							<td>
+								<div class="table-text">395</div>
+							</td>
+							<td>
+								<div class="table-text table-text--green">Online</div>
+							</td>
+							<td>
+								<div class="table-text">24 Out 2022</div>
+							</td>
+							<td>
+								<div class="main-table-buttons table-text">
+									<a href="#" class="main-table-button main-table-button--banned">
+										<ion-icon name="lock-closed" style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--view">
+										<ion-icon name="eye-sharp"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--edit">
+										<ion-icon name="create"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--delete">
+										<ion-icon name="trash"  style="font-size: 16px;"></ion-icon>
+									</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="table-text" style="border-radius:6px 0px 0px 6px ;">28</div>
+							</td>
+							<td>
+								<div class="table-text"><a href="edit-user.html">Kono Subarashii Sekai ni Shukufuku o!</a></div>
+							</td>
+							<td>
+								<div class="table-text"><ion-icon name="star" style="color: #f9ab00; font-size: 16px; margin-right: 5px;"></ion-icon> 9.0</div>
+							</td>
+							<td>
+								<div class="table-text">Anime</div>
+							</td>
+							<td>
+								<div class="table-text">2093</div>
+							</td>
+							<td>
+								<div class="table-text table-text--green">Online</div>
+							</td>
+							<td>
+								<div class="table-text">24 Out 2022</div>
+							</td>
+							<td>
+								<div class="main-table-buttons table-text">
+									<a href="#" class="main-table-button main-table-button--banned">
+										<ion-icon name="lock-closed" style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--view">
+										<ion-icon name="eye-sharp"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--edit">
+										<ion-icon name="create"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--delete">
+										<ion-icon name="trash"  style="font-size: 16px;"></ion-icon>
+									</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="table-text" style="border-radius:6px 0px 0px 6px ;">29</div>
+							</td>
+							<td>
+								<div class="table-text"><a href="edit-user.html">Sword Art Online: Alicization</a></div>
+							</td>
+							<td>
+								<div class="table-text"><ion-icon name="star" style="color: #f9ab00; font-size: 16px; margin-right: 5px;"></ion-icon> 6.1</div>
+							</td>
+							<td>
+								<div class="table-text">Anime</div>
+							</td>
+							<td>
+								<div class="table-text">1723</div>
+							</td>
+							<td>
+								<div class="table-text table-text--green">Online</div>
+							</td>
+							<td>
+								<div class="table-text">24 Out 2022</div>
+							</td>
+							<td>
+								<div class="main-table-buttons table-text">
+									<a href="#" class="main-table-button main-table-button--banned">
+										<ion-icon name="lock-closed" style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--view">
+										<ion-icon name="eye-sharp"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--edit">
+										<ion-icon name="create"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--delete">
+										<ion-icon name="trash"  style="font-size: 16px;"></ion-icon>
+									</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="table-text" style="border-radius:6px 0px 0px 6px ;">30</div>
+							</td>
+							<td>
+								<div class="table-text"><a href="edit-user.html">Tate no Yuusha no Nariagari</a></div>
+							</td>
+							<td>
+								<div class="table-text"><ion-icon name="star" style="color: #f9ab00; font-size: 16px; margin-right: 5px;"></ion-icon> 8.0</div>
+							</td>
+							<td>
+								<div class="table-text">Anime</div>
+							</td>
+							<td>
+								<div class="table-text">657</div>
+							</td>
+							<td>
+								<div class="table-text table-text--green">Online</div>
+							</td>
+							<td>
+								<div class="table-text">24 Out 2022</div>
+							</td>
+							<td>
+								<div class="main-table-buttons table-text">
+									<a href="#" class="main-table-button main-table-button--banned">
+										<ion-icon name="lock-closed" style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--view">
+										<ion-icon name="eye-sharp"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--edit">
+										<ion-icon name="create"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--delete">
+										<ion-icon name="trash"  style="font-size: 16px;"></ion-icon>
+									</a>
+								</div>
+							</td>
+						</tr><tr>
+							<td>
+								<div class="table-text" style="border-radius:6px 0px 0px 6px ;">31</div>
+							</td>
+							<td>
+								<div class="table-text"><a href="edit-user.html">Kimetsu no Yaiba</a></div>
+							</td>
+							<td>
+								<div class="table-text"><ion-icon name="star" style="color: #f9ab00; font-size: 16px; margin-right: 5px;"></ion-icon> 8.9</div>
+							</td>
+							<td>
+								<div class="table-text">Filme</div>
+							</td>
+							<td>
+								<div class="table-text">12392</div>
+							</td>
+							<td>
+								<div class="table-text table-text--green">Online</div>
+							</td>
+							<td>
+								<div class="table-text">24 Out 2022</div>
+							</td>
+							<td>
+								<div class="main-table-buttons table-text">
+									<a href="#" class="main-table-button main-table-button--banned">
+										<ion-icon name="lock-closed" style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--view">
+										<ion-icon name="eye-sharp"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--edit">
+										<ion-icon name="create"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--delete">
+										<ion-icon name="trash"  style="font-size: 16px;"></ion-icon>
+									</a>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="table-text" style="border-radius:6px 0px 0px 6px ;">32</div>
+							</td>
+							<td>
+								<div class="table-text"><a href="edit-user.html">Goblin Slayer</a></div>
+							</td>
+							<td>
+								<div class="table-text"><ion-icon name="star" style="color: #f9ab00; font-size: 16px; margin-right: 5px;"></ion-icon> 7.8</div>
+							</td>
+							<td>
+								<div class="table-text">Anime</div>
+							</td>
+							<td>
+								<div class="table-text">1023</div>
+							</td>
+							<td>
+								<div class="table-text table-text--green">Online</div>
+							</td>
+							<td>
+								<div class="table-text">24 Out 2022</div>
+							</td>
+							<td>
+								<div class="main-table-buttons table-text">
+									<a href="#" class="main-table-button main-table-button--banned">
+										<ion-icon name="lock-closed" style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--view">
+										<ion-icon name="eye-sharp"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--edit">
+										<ion-icon name="create"  style="font-size: 16px;"></ion-icon>
+									</a>
+									<a href="#" class="main-table-button main-table-button--delete">
+										<ion-icon name="trash"  style="font-size: 16px;"></ion-icon>
+									</a>
+								</div>
+							</td>
+					</tr></tbody>
+				</table>
+			</div>
+
+			<div class="foot">
+				<div class="left-top">
+				  
+				  <span>10 de 138</span>
+				</div>
+				<div class="right-top">
+					<ul class="paginator">
+						<li class="paginator-item">
+							<a href="#"><ion-icon name="chevron-back" size="small"></ion-icon></a>
+						</li>
+						<li class="paginator-item"><a href="#">1</a></li>
+						<li class="paginator-item"><a href="#">2</a></li>
+						<li class="paginator-item  paginator-item--active"><a href="#">3</a></li>
+						<li class="paginator-item"><a href="#">4</a></li>
+						<li class="paginator-item paginator-item--icon">
+							<a href="#"><ion-icon name="chevron-forward" size="small"></ion-icon></a>
+						</li>
+					</ul>
+				</div>
+			  </div>
+
+      </div>
+    </main>
+
+
+
+    <script src="scripts.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+</script>
+  </body>
+</html>

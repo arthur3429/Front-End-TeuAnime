@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teu Anime - Animes Online Grátis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="epList2()">
+    <!-- Header -->
+    <header>
+        <div class="header-wrapper">
+            <img src="images/lucide_menu.svg" alt="menu" id="menuIcon" onclick="showMenu()">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="teuanime.com"></a href="index.html">
+            <ul class="main-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="animes.html">Lista de Animes</a></li>
+                <li><a href="filmes.html">Filmes</a></li>
+                <li><a href="calendario.html">Calendário</a></li>
+                <a id="closeBtn" onclick="hideMenu()"><img src="images/ep_close-bold.svg" alt="x"></a>
+                <!-- NOTIFICAÇÃO -->
+                <!-- <a id="notifyBtn">Ative as Notificações :) <img src="images/notificação.svg" alt=""></a> -->
+            </ul>
+            <!-- PROFILE AND SEARCH AREA -->
+            <div class="profile">
+                <!-- SEARCH ICON -->
+                <div id="search-icon"  onclick="openSearchBar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z" fill="rgba(139,147,167,1)"/></svg>
+                </div>
+            <!-- NOTIFICAÇÃO NOTIFICATIONS/BELL ICON  -->
+            
+                <!-- <div id="notifyIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path fill="none" d="M0 0h24v24H0z"/><path d="M22 20H2v-2h1v-6.969C3 6.043 7.03 2 12 2s9 4.043 9 9.031V18h1v2zM9.5 21h5a2.5 2.5 0 1 1-5 0z" fill="rgba(139,147,167,1)"/></svg>
+                </div> -->
+
+            <!-- USER PROFILE -->
+            <!-- <div class="user-profile">
+                <img src="images/rato.png" alt=":D">
+                <div class="user-profile-info">
+                    <p>Anonymous Dev</p>
+                    <span>Editar Perfil</span>
+                </div>
+            </div> -->
+            </div>
+        </div>
+    </header>
+    <!-- Search bar -->
+    <div class="search-bar">
+        <div id="search-form">
+            
+                <input type="text" placeholder="Pesquisar animes..." />
+                <div class="button centralizado">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="22"
+                        height="22"
+                    >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"
+                            fill="white"
+                        />
+                    </svg>
+                </div>
+                <div
+                    class="button centralizado"
+                    onclick="closeSearchBar()"
+                    id="SearchCloseBtn"
+                >
+                    <img src="images/ep_close-bold.svg" alt="x" />
+                </div>
+            
+        </div>
+        <div class="search-results">
+            <div class="result">
+                <div class="anime-rating">
+                    <img src="images/bxs_star.svg" alt="star" />
+                    6.5 / 10
+                </div>
+                <div class="anime-image">
+                    <img src="images/image 3.png" alt="" />
+                </div>
+                <div class="result-info">
+                    <a href="#">Aharen-san wa Hakarenai</a>
+                    <span><h3 class="anime-status">em lançamento</h3></span>
+                    <div>
+                        <p class="anime-category">Escolar</p>
+                        <p class="anime-category">Comédia</p>
+                        <p class="anime-category">Fofura</p>
+                        <p class="anime-category">Fofura</p>
+                        <p class="anime-category">Fofura</p>
+                        <p class="anime-category">Fofura</p>
+                        <p class="anime-category">Fofura</p>
+                        <p class="anime-category">Ação</p>
+                    </div>
+
+                    <p class="anime-episodes">13 Episódios</p>
+                </div>
+            </div>
+            <div class="result">
+                <div class="anime-rating">
+                    <img src="images/bxs_star.svg" alt="star" />
+                    6.5 / 10
+                </div>
+                <div class="anime-image">
+                    <img src="images/image 3.png" alt="" />
+                </div>
+                <div class="result-info">
+                    <a href="#">Aharen-san wa Hakarenai</a>
+                    <span><h3 class="anime-status">em lançamento</h3></span>
+                    <div>
+                        <p class="anime-category">Escolar</p>
+                        <p class="anime-category">Comédia</p>
+                        <p class="anime-category">Fofura</p>
+                        <p class="anime-category">Ação</p>
+                    </div>
+
+                    <p class="anime-episodes">13 Episódios</p>
+                </div>
+            </div>
+        </div>
+        <!-- <a id="notifyBtn">Ative as Notificações :) <img src="images/notificação.svg" alt=""></a> -->
+    </div>
+    <!-- website content -->
+    <div class="module season">
+        
+        <div class="season-content">
+            <!-- iNFORMAÇÕES DO ANIME, TEMPORADAS E EPISÓDIOS -->
+            
+            <div class="anime-container">
+                <div class="anime-info">
+                    <img src="images/anime-thumb.png" alt="animepic">
+                    <!-- Parte que fica na imagem como se fosse a CAPA DO FACEBOOK -->
+                    <div class="anime-bg">
+                        <div class="anime-bg-overlay"></div>
+                        <img src="images/anime-thumb.png" alt="background"> 
+                    </div>
+                    <div class="anime-text">
+                        <div>
+                            <h1>Overlord</h1>
+                            <h2>[Nome Japonês do anime]</h2>
+                        </div>
+                        <h3>Sinopse</h3>
+                        <p class="sinopse">Um homem decide não deslogar quando um VRMMORPG antigo é fechado e como consequência ele é transportado para o jogo. Com apenas ele ali e sem uma família para se preocupar ele começa a tentar dominar o mundo do jogo, aonde os NPCs estão mudando pouco a pouco e começando a sentir emoções humanas.</p>
+                        <h3 class="anime-status">em lançamento</h3>
+                        <div class="anime-details">
+                            <div>
+                                <p>Ano: 2015</p>
+                                <p>Diretor: Naoyuki Itou</p>
+                                <p>13 Episódios</p>
+                            </div>
+                            <div>
+                                <p class="anime-category">Ação</p>
+                                <p class="anime-category">Aventura</p>
+                                <p class="anime-category">Fantasia</p>
+                                <p class="anime-category">Game</p>
+                                <p class="anime-category">Magia</p>
+                                <p class="anime-category">Sobrenatural</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="anime-rating">
+                        <img src="images/bxs_star.svg" alt="star">
+                        7.9 / 10
+                    </div>
+                </div>
+                <div class="seasons">
+                    <h2>Temporadas</h2>
+                    <div class="seasons-wrapper">
+                        <ul>
+                            <li>Temporada 1</li>
+                            <li>Temporada 2</li>
+                            <li>Temporada 3</li>
+                            <li class="active">Temporada 4</li>
+                            <!-- <li>...</li> -->
+                        </ul>
+                    </div>
+                    <!-- Eps adicionados via script para testar uma coisinha :> -->
+                    <div class="episodios">
+
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- ANIMES POPULARES -->
+            <div class="popular">
+                <h2 class="centralizado">Animes Populares</h2>
+                <ul class="animes-populares">
+                    <li>
+                       <div>
+                        <h3>Kimetsu no Yaiba</h3>
+                        <div class="anime-rating">
+                            <img src="images/bxs_star.svg" alt="star">
+                            8.5 / 10
+                        </div>
+                       </div>
+                    </li>
+                    <li>
+                       <div>
+                        <h3>Kimetsu no Yaiba</h3>
+                        <div class="anime-rating">
+                            <img src="images/bxs_star.svg" alt="star">
+                            8.5 / 10
+                        </div>
+                       </div>
+                    </li>
+                    <li>
+                       <div>
+                        <h3>Kimetsu no Yaiba</h3>
+                        <div class="anime-rating">
+                            <img src="images/bxs_star.svg" alt="star">
+                            8.5 / 10
+                        </div>
+                       </div>
+                    </li>
+                    <li>
+                       <div>
+                        <h3>Kimetsu no Yaiba</h3>
+                        <div class="anime-rating">
+                            <img src="images/bxs_star.svg" alt="star">
+                            8.5 / 10
+                        </div>
+                       </div>
+                    </li>
+                    <li>
+                       <div>
+                        <h3>Kimetsu no Yaiba</h3>
+                        <div class="anime-rating">
+                            <img src="images/bxs_star.svg" alt="star">
+                            8.5 / 10
+                        </div>
+                       </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+          <div class="header-wrapper">
+            <div class="left-side">
+                <a href="index.html" class="logo"><img src="images/logo.png" alt="teuanime.com"></a href="index.html">
+                <a href="#">Contato</a>
+                <a href="#">DMCA</a>
+            </div>
+            <a href="#" id="twitterLogo">
+                <img src="images/twitter.svg" alt="twitter">
+            </a>
+            <p>Animes Online Grátis em HD</p>  
+        </div>
+    </footer>
+
+    <!-- Meu Script -->
+    <script src="main.js"></script>
+</body>
+</html>

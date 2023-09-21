@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Teu Anime - Animes Online Grátis</title>
+        <link rel="stylesheet" href="style.css" />
+        <!-- Flickity CSS -->
+        <link rel="stylesheet" href="libs/flickity.css" />
+    </head>
+    <!-- Mermão, eu só quero um emprego .-.  -->
+    <body onload="home()">
+        <!-- Header -->
+        <header>
+            <div class="header-wrapper">
+                <img
+                    src="images/lucide_menu.svg"
+                    alt="menu"
+                    id="menuIcon"
+                    onclick="showMenu()"
+                />
+                <a href="index.html" class="logo"
+                    ><img src="images/logo.png" alt="teuanime.com"
+                /></a>
+                <ul class="main-menu">
+                    <li class="active"><a href="index.html">Início</a></li>
+                    <li><a href="animes.html">Lista de Animes</a></li>
+                    <li><a href="filmes.html">Filmes</a></li>
+                    <li><a href="calendario.html">Calendário</a></li>
+                    <a id="closeBtn" onclick="hideMenu()"
+                        ><img src="images/ep_close-bold.svg" alt="x"
+                    /></a>
+                    <!-- NOTIFICAÇÃO -->
+                    <!-- <a id="notifyBtn">Ative as Notificações :) <img src="images/notificação.svg" alt=""></a> -->
+                </ul>
+                <!-- PROFILE AND SEARCH AREA -->
+                <div class="profile">
+                    <!-- USER PROFILE -->
+                    <a class="user-profile" href="../hotflix/catalog.html">
+                        <img
+                            src="images/chad-icon.png"
+                            alt=":D"
+                            id="chadicon"
+                        />
+                        <div class="user-profile-info">
+                            <p>Olá visitante, fique á vontade :)</p>
+                            <span
+                                >Clique aqui e veja uma demo da área
+                                admnistrativa.</span
+                            >
+                        </div>
+                    </a>
+                    <!-- SEARCH ICON -->
+                    <div id="search-icon" onclick="openSearchBar()">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="22"
+                            height="22"
+                        >
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path
+                                d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"
+                                fill="rgba(139,147,167,1)"
+                            />
+                        </svg>
+                    </div>
+                    <!-- NOTIFICAÇÃO NOTIFICATIONS/BELL ICON  -->
+
+                    <!--  <div id="notifyIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path fill="none" d="M0 0h24v24H0z"/><path d="M22 20H2v-2h1v-6.969C3 6.043 7.03 2 12 2s9 4.043 9 9.031V18h1v2zM9.5 21h5a2.5 2.5 0 1 1-5 0z" fill="rgba(139,147,167,1)"/></svg>
+                </div> -->
+                </div>
+            </div>
+        </header>
+        <!-- Search bar -->
+        <div class="search-bar">
+            <div id="search-form">
+                <input type="text" placeholder="Pesquisar animes..." />
+                <div class="button centralizado">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="22"
+                        height="22"
+                    >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"
+                            fill="white"
+                        />
+                    </svg>
+                </div>
+                <div
+                    class="button centralizado"
+                    onclick="closeSearchBar()"
+                    id="SearchCloseBtn"
+                >
+                    <img src="images/ep_close-bold.svg" alt="x" />
+                </div>
+            </div>
+            <div class="search-results">
+                <div class="result">
+                    <div class="anime-rating">
+                        <img src="images/bxs_star.svg" alt="star" />
+                        6.5 / 10
+                    </div>
+                    <div class="anime-image">
+                        <img src="images/image 3.png" alt="" />
+                    </div>
+                    <div class="result-info">
+                        <a href="#">Aharen-san wa Hakarenai</a>
+                        <span><h3 class="anime-status">em lançamento</h3></span>
+                        <div>
+                            <p class="anime-category">Escolar</p>
+                            <p class="anime-category">Comédia</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Ação</p>
+                        </div>
+
+                        <p class="anime-episodes">13 Episódios</p>
+                    </div>
+                </div>
+                <div class="result">
+                    <div class="anime-rating">
+                        <img src="images/bxs_star.svg" alt="star" />
+                        6.5 / 10
+                    </div>
+                    <div class="anime-image">
+                        <img src="images/image 3.png" alt="" />
+                    </div>
+                    <div class="result-info">
+                        <a href="#">Aharen-san wa Hakarenai</a>
+                        <span><h3 class="anime-status">em lançamento</h3></span>
+                        <div>
+                            <p class="anime-category">Escolar</p>
+                            <p class="anime-category">Comédia</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Ação</p>
+                        </div>
+
+                        <p class="anime-episodes">13 Episódios</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <a id="notifyBtn">Ative as Notificações :) <img src="images/notificação.svg" alt=""></a> -->
+        </div>
+        <!-- website content -->
+        <div class="module">
+            <!-- FIRST SLIDER SECTION -- Lança Hoje! -->
+            <header>
+                <h1>Animes Populares</h1>
+                <div class="slider-buttons">
+                    <!-- LEFT ARROW ICON -->
+                    <svg
+                        id="prevBtn"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                    >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M10.828 12l4.95 4.95-1.414 1.414L8 12l6.364-6.364 1.414 1.414z"
+                        />
+                    </svg>
+                    <!-- RIGHT ARROW ICON -->
+                    <svg
+                        id="nextBtn"
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="24"
+                        height="24"
+                    >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"
+                        />
+                    </svg>
+                </div>
+            </header>
+            <!--SLIDER-->
+            <div class="slider-1">
+                <!-- Elementos Adicionados via JavaScript-->
+            </div>
+            <!-- GRID QUE ENGLOBA OS ULTIMOS LANÇAMENTOS E O ASIDE -->
+            <div class="module-content">
+                <!-- Seção dos últimos lançamentos  -->
+                <section>
+                    <!-- Header da segunda seção -- Últimos Lançamentos -->
+                    <header>
+                        <h2>Últimos Lançamentos</h2>
+                        <a href="#" class="see-more">
+                            Ver mais
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                width="15"
+                                height="15"
+                            >
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"
+                                />
+                            </svg>
+                        </a>
+                    </header>
+                    <!-- Conteúdo -->
+                    <div class="section-content" id="new-eps-section">
+                        <!-- Elementos Adicionados via JavaScript-->
+                    </div>
+                </section>
+                <!-- Seção dos Recentemente Adicionados -->
+                <section>
+                    <!-- Header da segunda seção -- Recentemente Adicionados -->
+                    <header>
+                        <h2>Recentemente Adicionados</h2>
+                        <a href="episodio.html" class="see-more">
+                            Ver mais
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                width="15"
+                                height="15"
+                            >
+                                <path fill="none" d="M0 0h24v24H0z" />
+                                <path
+                                    d="M13.172 12l-4.95-4.95 1.414-1.414L16 12l-6.364 6.364-1.414-1.414z"
+                                />
+                            </svg>
+                        </a>
+                    </header>
+                    <div class="section-content" id="recent-adds-section">
+                        <!-- Episodios adicionados via JS -->
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="header-wrapper">
+                <div class="left-side">
+                    <a href="index.html" class="logo"
+                        ><img src="images/logo.png" alt="teuanime.com"
+                    /></a>
+                    <a href="#">Contato</a>
+                    <a href="#">DMCA</a>
+                </div>
+                <a href="#" id="twitterLogo">
+                    <img src="images/twitter.svg" alt="twitter" />
+                </a>
+                <p>Animes Online Grátis em HD</p>
+            </div>
+        </footer>
+
+        <!-- Flickity JS -->
+        <script src="libs/flickity.pkgd.js"></script>
+        <!-- Meu Script -->
+        <script src="main.js"></script>
+    </body>
+</html>

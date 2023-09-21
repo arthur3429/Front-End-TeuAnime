@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adicionar novo Anime</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="dashboard.css"> -->
+    <link rel="shortcut icon" href="IMG/favicon-32x32.png" type="image/x-icon">
+  </head>
+  <body onload="imagePreview()">
+    <header>
+      <div class="logo">
+        <a href="../teuanime.com/index.html">
+          <img src="IMG/logo.png" alt="TEUANIME" style="width: 150px" />
+        </a>
+      </div>
+      <div class="menu">
+        <ion-icon name="menu" size="large"></ion-icon>
+      </div>
+    </header>
+    <div class="sidebar">
+      <div class="logo">
+        <a href="../teuanime.com/index.html">
+          <img src="IMG/logo.png" alt="TEUANIME" style="width: 150px" />
+        </a>
+      </div>
+      <div class="user-sidebar">
+        <ion-icon name="person-outline" style="
+        color: white;
+        background-color: #212027;
+        padding: 8px;
+        border-radius: 5px;
+      "></ion-icon>
+        <div class="title-user-sidebar">
+          <span>Admin</span>
+          <p>Keraunos</p>
+        </div>
+        <button>
+          <ion-icon name="log-out-outline"></ion-icon>
+        </button>
+      </div>
+      <div class="container-sidebar" style="overflow-y: auto;">
+        <div class="sidebar-container">
+          <ul>
+            <li class="sidebar-nav-item">
+              <a href="catalog.html">
+                <ion-icon name="film"></ion-icon>
+                <span>CATÁLOGO</span>
+              </a>
+            </li>
+            <li class="sidebar-nav-item"> 
+              <a href="add-item.html" style="color: #00dffb">
+                <ion-icon name="add-circle-outline"></ion-icon>
+                <span>ADICIONAR ANIME</span>
+              </a>
+            </li>
+
+            <li class="sidebar-nav-item">
+              <a href="../teuanime.com/index.html">
+                <ion-icon name="arrow-back"></ion-icon>
+                <span>RETORNAR AO SITE</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="credits">
+        <p>&copy; TEUANIME, 2022.</p>
+        
+      </div>
+    </div>
+
+    <main>
+      <div class="add-item">
+        <div class="topo">
+          <div class="left-top">
+            <h2>Adicionar Anime</h2>
+          </div>
+        </div>
+
+        <form autocomplete="off">
+          <div class="formulary" >
+            <div class="form-testando123">
+              <div class="form-img">
+                <label for="form-img-upload">Capa(270 x 400)</label>
+                <input id="form-img-upload" name="thumbnail" type="file" accept="image/*" style="display: none;" />
+                <!-- <img id="form-img-uploaded" src="#" alt="" /> -->
+              </div>
+              <div class="form-container">
+                <div class="form-title">
+                  <input type="text" placeholder="Nome do Anime*" id="titulo" name="titulo">
+                  <input type="text" placeholder="Nome Japonês do Anime" name="tituloJp">
+                </div>
+                <div class="form-description">
+                  <textarea name="sinopse" id="sinopse" cols="30" rows="10" placeholder="Descrição/Sinopse"></textarea>
+                  <!-- <input type="text" placeholder="Description" style="height: 136px; padding-bottom: 100px;"> -->
+                </div>
+                <div class="infos1">
+                  <input type="text" placeholder="Ano de Lançamento" name="ano">
+                  <input type="text" placeholder="Diretor" name="diretor">
+                  <input id="qt-episodios" type="text" placeholder="Qt. de Episódios" name="qtEpisodios">
+                </div>
+                <div class="infos2">
+                  <input type="text" placeholder="Categoria" name="categorias">
+                  <div class="cat-button" onclick="addCategorie()">+ Adicionar Categoria</div>
+                </div>
+
+    
+                <div class="categories">
+                  
+                </div>
+
+              </div>
+              <div class="generate-info">
+               
+                  <h3>Puxar informações do TMDB</h3>
+                  <input type="text" placeholder="Gerar info via ID">
+                  <button>Buscar</button>
+               
+              </div>
+            </div>
+            <!-- <div class="form-container-2">
+              <input type="text" placeholder="Upload video">
+              <input type="text" placeholder="Or add a link">
+            </div> -->
+            <button id="testetete">Publicar</button>
+          </div>
+        </form>
+       
+      </div>
+    </main>
+    
+    <script src="scripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </script>
+  </body>
+</html>

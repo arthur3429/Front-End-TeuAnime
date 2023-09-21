@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: normal;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  background: url(img/background.jpg) center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hotflix {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #1a191f;
+  border: 1px solid #222028;
+  border-radius: 6px;
+  padding: 120px 60px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.hotflix h1 {
+  color: #f9ab00;
+  line-height: 100%;
+  font-size: 120px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.hotflix p {
+  font-size: 14px;
+  color: #fff;
+}
+
+.hotflix a {
+  color: #f9ab00;
+  text-decoration: none;
+}
+
+.hotflix a:hover {
+  text-decoration: underline;
+}
+
+.hotflix img {
+  padding-bottom: 10px;
+  width: 140px;
+}
+
+.hotflix input {
+  background-color: #222028;
+  border: 2px solid transparent;
+  height: 46px;
+  font-size: 16px;
+  width: 100%;
+  color: #fff;
+  border-radius: 6px;
+  padding: 0 20px;
+  margin: 10px 0;
+}
+
+.checkbox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+#checkbox {
+  margin-right: 15px;
+  margin-left: 5px;
+  width: 15px;
+}
+
+#sign-in {
+  border: 2px solid #f9ab00;
+  background-color: rgba(204, 204, 204, 0);
+  color: white;
+  font-size: 14px;
+}
+
+#sign-in:hover {
+  cursor: pointer;
+  background-color: #f9ab001a;
+}
+
+.social-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: calc(33% - 10px);
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.social-fb {
+  background-color: #3b5999;
+}
+
+.social-fb:hover {
+  color: #3b5999;
+  background-color: white;
+}
+
+.social-tw {
+  background-color: #1da1f2;
+}
+
+.social-tw:hover {
+  color: #1da1f2;
+  background-color: white;
+}
+
+.social-gm {
+  background-color: #df4a32;
+}
+
+.social-gm:hover {
+  color: #df4a32;
+  background-color: white;
+}
+
+@media (max-width: 570px) {
+  .hotflix {
+    padding: 0;
+    margin: 0;
+  }
+
+  .hotflix img {
+    padding-bottom: 20px;
+  }
+}

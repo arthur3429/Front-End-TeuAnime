@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teu Anime - Animes Online Grátis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="weekDays()">
+    <!-- Header -->
+    <header>
+        <div class="header-wrapper">
+            <img src="images/lucide_menu.svg" alt="menu" id="menuIcon" onclick="showMenu()">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="teuanime.com"></a href="index.html">
+            <ul class="main-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="animes.html">Lista de Animes</a></li>
+                <li><a href="filmes.html">Filmes</a></li>
+                <li class="active"><a href="calendario.html">Calendário</a></li>
+                <a id="closeBtn" onclick="hideMenu()"><img src="images/ep_close-bold.svg" alt="x"></a>
+                <!-- NOTIFICAÇÃO -->
+                <!-- <a id="notifyBtn">Ative as Notificações :) <img src="images/notificação.svg" alt=""></a> -->
+            </ul>
+            <!-- PROFILE AND SEARCH AREA -->
+            <div class="profile">
+                <!-- SEARCH ICON -->
+                <div id="search-icon"  onclick="openSearchBar()">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z" fill="rgba(139,147,167,1)"/></svg>
+                </div>
+            <!-- NOTIFICAÇÃO NOTIFICATIONS/BELL ICON  -->
+            
+                <!-- <div id="notifyIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path fill="none" d="M0 0h24v24H0z"/><path d="M22 20H2v-2h1v-6.969C3 6.043 7.03 2 12 2s9 4.043 9 9.031V18h1v2zM9.5 21h5a2.5 2.5 0 1 1-5 0z" fill="rgba(139,147,167,1)"/></svg>
+                </div> -->
+
+            <!-- USER PROFILE -->
+            <!-- <div class="user-profile">
+                <img src="images/rato.png" alt=":D">
+                <div class="user-profile-info">
+                    <p>Anonymous Dev</p>
+                    <span>Editar Perfil</span>
+                </div>
+            </div> -->
+            </div>
+        </div>
+    </header>
+    <!-- Search bar -->
+    <div class="search-bar">
+        <div id="search-form">
+            
+                <input type="text" placeholder="Pesquisar animes..." />
+                <div class="button centralizado">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="22"
+                        height="22"
+                    >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"
+                            fill="white"
+                        />
+                    </svg>
+                </div>
+                <div
+                    class="button centralizado"
+                    onclick="closeSearchBar()"
+                    id="SearchCloseBtn"
+                >
+                    <img src="images/ep_close-bold.svg" alt="x" />
+                </div>
+            
+        </div>
+        <div class="search-results">
+            <div class="result">
+                <div class="anime-rating">
+                    <img src="images/bxs_star.svg" alt="star" />
+                    6.5 / 10
+                </div>
+                <div class="anime-image">
+                    <img src="images/image 3.png" alt="" />
+                </div>
+                <div class="result-info">
+                    <a href="#">Aharen-san wa Hakarenai</a>
+                    <span><h3 class="anime-status">em lançamento</h3></span>
+                    <div>
+                        <p class="anime-category">Escolar</p>
+                        <p class="anime-category">Comédia</p>
+                        <p class="anime-category">Fofura</p>
+                        <p class="anime-category">Fofura</p>
+                        <p class="anime-category">Fofura</p>
+                        <p class="anime-category">Fofura</p>
+                        <p class="anime-category">Fofura</p>
+                        <p class="anime-category">Ação</p>
+                    </div>
+
+                    <p class="anime-episodes">13 Episódios</p>
+                </div>
+            </div>
+            <div class="result">
+                <div class="anime-rating">
+                    <img src="images/bxs_star.svg" alt="star" />
+                    6.5 / 10
+                </div>
+                <div class="anime-image">
+                    <img src="images/image 3.png" alt="" />
+                </div>
+                <div class="result-info">
+                    <a href="#">Aharen-san wa Hakarenai</a>
+                    <span><h3 class="anime-status">em lançamento</h3></span>
+                    <div>
+                        <p class="anime-category">Escolar</p>
+                        <p class="anime-category">Comédia</p>
+                        <p class="anime-category">Fofura</p>
+                        <p class="anime-category">Ação</p>
+                    </div>
+
+                    <p class="anime-episodes">13 Episódios</p>
+                </div>
+            </div>
+        </div>
+        <!-- <a id="notifyBtn">Ative as Notificações :) <img src="images/notificação.svg" alt=""></a> -->
+    </div>
+    <!-- website content -->
+    <div class="module animes-html calendar">
+        <div class="anime-list">
+            <header>
+                <h1><img src="images/Vector 1.svg" alt="l"> Calendário </h1>
+            </header>
+            <div class="filters">
+                
+                <div class="filter-wrapper">
+                    <ul class="week-days">
+                        <li class="active">Domingo</li>
+                        <li>Segunda</li>
+                        <li>Terça</li>
+                        <li>Quarta</li>
+                        <li>Quinta</li>
+                        <li>Sexta</li>
+                        <li>Sábado</li>
+                    </ul>
+                </div>
+
+                <div class="filter-result centralizado">
+                    <img src="images/fe_calendar.svg" alt="c">
+                    9 RESULTADOS
+                </div>
+            </div>
+            <!-- Resultado dos filtros -->
+            <div class="filter-results">
+
+                <article>
+                    <div class="poster">
+                        <img src="images/Rectangle 2.png" alt="img">
+                        <a href="#">
+                            <div class="poster-overlay">
+                                <div class="play-btn">
+                                    <!-- PLAY ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.376 12.416L8.777 19.482A.5.5 0 0 1 8 19.066V4.934a.5.5 0 0 1 .777-.416l10.599 7.066a.5.5 0 0 1 0 .832z" fill="rgba(255,255,255,1)"/></svg>
+                                </div>
+                                <div class="rating">
+                                    <!-- STAR ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" fill="rgba(255,255,255,1)"/></svg>
+                                    5.4
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="data">
+                        <h3><a href="#">DanMachi IV</a></h3>
+                        <h4><a href="#">Aventura</a></h4>
+                    </div>
+                </article>
+                <article>
+                    <div class="poster">
+                        <img src="images/Rectangle 2.png" alt="img">
+                        <a href="#">
+                            <div class="poster-overlay">
+                                <div class="play-btn">
+                                    <!-- PLAY ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.376 12.416L8.777 19.482A.5.5 0 0 1 8 19.066V4.934a.5.5 0 0 1 .777-.416l10.599 7.066a.5.5 0 0 1 0 .832z" fill="rgba(255,255,255,1)"/></svg>
+                                </div>
+                                <div class="rating">
+                                    <!-- STAR ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" fill="rgba(255,255,255,1)"/></svg>
+                                    5.4
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="data">
+                        <h3><a href="#">DanMachi IV</a></h3>
+                        <h4><a href="#">Aventura</a></h4>
+                    </div>
+                </article>
+                <article>
+                    <div class="poster">
+                        <img src="images/Rectangle 2.png" alt="img">
+                        <a href="#">
+                            <div class="poster-overlay">
+                                <div class="play-btn">
+                                    <!-- PLAY ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.376 12.416L8.777 19.482A.5.5 0 0 1 8 19.066V4.934a.5.5 0 0 1 .777-.416l10.599 7.066a.5.5 0 0 1 0 .832z" fill="rgba(255,255,255,1)"/></svg>
+                                </div>
+                                <div class="rating">
+                                    <!-- STAR ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" fill="rgba(255,255,255,1)"/></svg>
+                                    5.4
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="data">
+                        <h3><a href="#">DanMachi IV</a></h3>
+                        <h4><a href="#">Aventura</a></h4>
+                    </div>
+                </article>
+                <article>
+                    <div class="poster">
+                        <img src="images/Rectangle 2.png" alt="img">
+                        <a href="#">
+                            <div class="poster-overlay">
+                                <div class="play-btn">
+                                    <!-- PLAY ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.376 12.416L8.777 19.482A.5.5 0 0 1 8 19.066V4.934a.5.5 0 0 1 .777-.416l10.599 7.066a.5.5 0 0 1 0 .832z" fill="rgba(255,255,255,1)"/></svg>
+                                </div>
+                                <div class="rating">
+                                    <!-- STAR ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" fill="rgba(255,255,255,1)"/></svg>
+                                    5.4
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="data">
+                        <h3><a href="#">DanMachi IV</a></h3>
+                        <h4><a href="#">Aventura</a></h4>
+                    </div>
+                </article>
+                <article>
+                    <div class="poster">
+                        <img src="images/Rectangle 2.png" alt="img">
+                        <a href="#">
+                            <div class="poster-overlay">
+                                <div class="play-btn">
+                                    <!-- PLAY ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.376 12.416L8.777 19.482A.5.5 0 0 1 8 19.066V4.934a.5.5 0 0 1 .777-.416l10.599 7.066a.5.5 0 0 1 0 .832z" fill="rgba(255,255,255,1)"/></svg>
+                                </div>
+                                <div class="rating">
+                                    <!-- STAR ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" fill="rgba(255,255,255,1)"/></svg>
+                                    5.4
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="data">
+                        <h3><a href="#">DanMachi IV</a></h3>
+                        <h4><a href="#">Aventura</a></h4>
+                    </div>
+                </article>
+                <article>
+                    <div class="poster">
+                        <img src="images/Rectangle 2.png" alt="img">
+                        <a href="#">
+                            <div class="poster-overlay">
+                                <div class="play-btn">
+                                    <!-- PLAY ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.376 12.416L8.777 19.482A.5.5 0 0 1 8 19.066V4.934a.5.5 0 0 1 .777-.416l10.599 7.066a.5.5 0 0 1 0 .832z" fill="rgba(255,255,255,1)"/></svg>
+                                </div>
+                                <div class="rating">
+                                    <!-- STAR ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" fill="rgba(255,255,255,1)"/></svg>
+                                    5.4
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="data">
+                        <h3><a href="#">DanMachi IV</a></h3>
+                        <h4><a href="#">Aventura</a></h4>
+                    </div>
+                </article>
+                <article>
+                    <div class="poster">
+                        <img src="images/Rectangle 2.png" alt="img">
+                        <a href="#">
+                            <div class="poster-overlay">
+                                <div class="play-btn">
+                                    <!-- PLAY ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.376 12.416L8.777 19.482A.5.5 0 0 1 8 19.066V4.934a.5.5 0 0 1 .777-.416l10.599 7.066a.5.5 0 0 1 0 .832z" fill="rgba(255,255,255,1)"/></svg>
+                                </div>
+                                <div class="rating">
+                                    <!-- STAR ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" fill="rgba(255,255,255,1)"/></svg>
+                                    5.4
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="data">
+                        <h3><a href="#">DanMachi IV</a></h3>
+                        <h4><a href="#">Aventura</a></h4>
+                    </div>
+                </article>
+                <article>
+                    <div class="poster">
+                        <img src="images/Rectangle 2.png" alt="img">
+                        <a href="#">
+                            <div class="poster-overlay">
+                                <div class="play-btn">
+                                    <!-- PLAY ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.376 12.416L8.777 19.482A.5.5 0 0 1 8 19.066V4.934a.5.5 0 0 1 .777-.416l10.599 7.066a.5.5 0 0 1 0 .832z" fill="rgba(255,255,255,1)"/></svg>
+                                </div>
+                                <div class="rating">
+                                    <!-- STAR ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" fill="rgba(255,255,255,1)"/></svg>
+                                    5.4
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="data">
+                        <h3><a href="#">DanMachi IV</a></h3>
+                        <h4><a href="#">Aventura</a></h4>
+                    </div>
+                </article>
+                <article>
+                    <div class="poster">
+                        <img src="images/Rectangle 2.png" alt="img">
+                        <a href="#">
+                            <div class="poster-overlay">
+                                <div class="play-btn">
+                                    <!-- PLAY ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M19.376 12.416L8.777 19.482A.5.5 0 0 1 8 19.066V4.934a.5.5 0 0 1 .777-.416l10.599 7.066a.5.5 0 0 1 0 .832z" fill="rgba(255,255,255,1)"/></svg>
+                                </div>
+                                <div class="rating">
+                                    <!-- STAR ICON -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="14" height="14"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18.26l-7.053 3.948 1.575-7.928L.587 8.792l8.027-.952L12 .5l3.386 7.34 8.027.952-5.935 5.488 1.575 7.928z" fill="rgba(255,255,255,1)"/></svg>
+                                    5.4
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="data">
+                        <h3><a href="#">DanMachi IV</a></h3>
+                        <h4><a href="#">Aventura</a></h4>
+                    </div>
+                </article>
+            </div>
+            <ul class="pagination">
+                <li><img src="images/left.svg" alt="left"></li>
+                <li class="active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>...</li>
+                <li>25</li>
+                <li><img src="images/right.svg" alt="right"></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+          <div class="header-wrapper">
+            <div class="left-side">
+                <a href="index.html" class="logo"><img src="images/logo.png" alt="teuanime.com"></a href="index.html">
+                <a href="#">Contato</a>
+                <a href="#">DMCA</a>
+            </div>
+            <a href="#" id="twitterLogo">
+                <img src="images/twitter.svg" alt="twitter">
+            </a>
+            <p>Animes Online Grátis em HD</p>  
+        </div>
+    </footer>
+
+    <!-- Meu Script -->
+    <script src="main.js"></script>
+</body>
+</html>

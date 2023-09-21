@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Teu Anime - Animes Online Grátis</title>
+        <link rel="stylesheet" href="style.css" />
+        <!-- JWPlayer Script -->
+        <script src="//content.jwplatform.com/libraries/oH2wJDod.js"></script>
+    </head>
+    <body onload="epList()">
+        <!-- Header -->
+        <header>
+            <div class="header-wrapper">
+                <img
+                    src="images/lucide_menu.svg"
+                    alt="menu"
+                    id="menuIcon"
+                    onclick="showMenu()"
+                />
+                <a href="index.html" class="logo"
+                    ><img src="images/logo.png" alt="teuanime.com"
+                /></a>
+                <ul class="main-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="animes.html">Lista de Animes</a></li>
+                    <li><a href="filmes.html">Filmes</a></li>
+                    <li><a href="calendario.html">Calendário</a></li>
+                    <a id="closeBtn" onclick="hideMenu()"
+                        ><img src="images/ep_close-bold.svg" alt="x"
+                    /></a>
+                    <!-- NOTIFICAÇÃO -->
+                    <!-- <a id="notifyBtn">Ative as Notificações :) <img src="images/notificação.svg" alt=""></a> -->
+                </ul>
+                <!-- PROFILE AND SEARCH AREA -->
+                <div class="profile">
+                    <!-- SEARCH ICON -->
+                    <div id="search-icon" onclick="openSearchBar()">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="22"
+                            height="22"
+                        >
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path
+                                d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"
+                                fill="rgba(139,147,167,1)"
+                            />
+                        </svg>
+                    </div>
+                    <!-- NOTIFICAÇÃO NOTIFICATIONS/BELL ICON  -->
+
+                    <!-- <div id="notifyIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path fill="none" d="M0 0h24v24H0z"/><path d="M22 20H2v-2h1v-6.969C3 6.043 7.03 2 12 2s9 4.043 9 9.031V18h1v2zM9.5 21h5a2.5 2.5 0 1 1-5 0z" fill="rgba(139,147,167,1)"/></svg>
+                </div> -->
+
+                    <!-- USER PROFILE -->
+                    <!-- <div class="user-profile">
+                <img src="images/rato.png" alt=":D">
+                <div class="user-profile-info">
+                    <p>Anonymous Dev</p>
+                    <span>Editar Perfil</span>
+                </div>
+            </div> -->
+                </div>
+            </div>
+        </header>
+        <!-- Search bar -->
+        <div class="search-bar">
+            <div id="search-form">
+                <input type="text" placeholder="Pesquisar animes..." />
+                <div class="button centralizado">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        width="22"
+                        height="22"
+                    >
+                        <path fill="none" d="M0 0h24v24H0z" />
+                        <path
+                            d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"
+                            fill="white"
+                        />
+                    </svg>
+                </div>
+                <div
+                    class="button centralizado"
+                    onclick="closeSearchBar()"
+                    id="SearchCloseBtn"
+                >
+                    <img src="images/ep_close-bold.svg" alt="x" />
+                </div>
+            </div>
+            <div class="search-results">
+                <div class="result">
+                    <div class="anime-rating">
+                        <img src="images/bxs_star.svg" alt="star" />
+                        6.5 / 10
+                    </div>
+                    <div class="anime-image">
+                        <img src="images/image 3.png" alt="" />
+                    </div>
+                    <div class="result-info">
+                        <a href="#">Aharen-san wa Hakarenai</a>
+                        <span><h3 class="anime-status">em lançamento</h3></span>
+                        <div>
+                            <p class="anime-category">Escolar</p>
+                            <p class="anime-category">Comédia</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Ação</p>
+                        </div>
+
+                        <p class="anime-episodes">13 Episódios</p>
+                    </div>
+                </div>
+                <div class="result">
+                    <div class="anime-rating">
+                        <img src="images/bxs_star.svg" alt="star" />
+                        6.5 / 10
+                    </div>
+                    <div class="anime-image">
+                        <img src="images/image 3.png" alt="" />
+                    </div>
+                    <div class="result-info">
+                        <a href="#">Aharen-san wa Hakarenai</a>
+                        <span><h3 class="anime-status">em lançamento</h3></span>
+                        <div>
+                            <p class="anime-category">Escolar</p>
+                            <p class="anime-category">Comédia</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Ação</p>
+                        </div>
+
+                        <p class="anime-episodes">13 Episódios</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <a id="notifyBtn">Ative as Notificações :) <img src="images/notificação.svg" alt=""></a> -->
+        </div>
+        <!-- website content -->
+        <div class="module episode-html">
+            <div class="ep-content">
+                <div class="ep-data">
+                    <!-- Título e número do eisódio -->
+                    <header>
+                        <h1>Overlord IV Episódio 12</h1>
+                        <span>invasão da capital real</span>
+                    </header>
+                    <!-- video do episodio -->
+                    <div class="episode">
+                        <div id="myElement"></div>
+                        <!-- Configuração do JWPlayer -->
+                        <script>
+                            var playerInstance = jwplayer("myElement");
+                            playerInstance.setup({
+                                file: "https://drive.google.com/uc?id=1S5II62fSxJz81ZKtVI-5oYaiK2HmFHKs",
+                                type: "mp4",
+                                image: "images/thumb.png",
+                            });
+                        </script>
+                    </div>
+                    <!-- Botões de navegação -->
+                    <div class="episode-nav">
+                        <a href="#">
+                            <div class="ep-info centralizado">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    width="12"
+                                    height="12"
+                                >
+                                    <path
+                                        d="M14 10V14H10V10H14ZM16 10H21V14H16V10ZM14 21H10V16H14V21ZM16 21V16H21V20C21 20.5523 20.5523 21 20 21H16ZM14 3V8H10V3H14ZM16 3H20C20.5523 3 21 3.44772 21 4V8H16V3ZM8 10V14H3V10H8ZM8 21H4C3.44772 21 3 20.5523 3 20V16H8V21ZM8 3V8H3V4C3 3.44772 3.44772 3 4 3H8Z"
+                                        fill="rgba(255,255,255,1)"
+                                    ></path>
+                                </svg>
+                                <p>Informações</p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="ep-erro centralizado">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24"
+                                    width="12"
+                                    height="12"
+                                >
+                                    <path
+                                        d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11 15V17H13V15H11ZM11 7V13H13V7H11Z"
+                                        fill="rgba(255,255,255,1)"
+                                    ></path>
+                                </svg>
+                                <p>Reportar Erro</p>
+                            </div>
+                        </a>
+                        <div class="ep-list">
+                            <a href="temporadas.html">
+                                <div class="prev centralizado">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        width="12"
+                                        height="12"
+                                    >
+                                        <path
+                                            d="M10.8284 12.0007L15.7782 16.9504L14.364 18.3646L8 12.0007L14.364 5.63672L15.7782 7.05093L10.8284 12.0007Z"
+                                            fill="rgba(255,255,255,1)"
+                                        ></path>
+                                    </svg>
+                                    <p>Anterior</p>
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="list centralizado">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        width="12"
+                                        height="12"
+                                    >
+                                        <path
+                                            d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"
+                                            fill="rgba(255,255,255,1)"
+                                        ></path>
+                                    </svg>
+                                </div>
+                            </a>
+                            <a href="">
+                                <div class="next centralizado">
+                                    <p>Próximo</p>
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24"
+                                        width="12"
+                                        height="12"
+                                    >
+                                        <path
+                                            d="M13.1714 12.0007L8.22168 7.05093L9.63589 5.63672L15.9999 12.0007L9.63589 18.3646L8.22168 16.9504L13.1714 12.0007Z"
+                                            fill="rgba(255,255,255,1)"
+                                        ></path>
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Lista de episódios -->
+                <div class="ep-anime-list">
+                    <h2 class="centralizado">Esse anime tem 12 episódios</h2>
+                    <div class="ep-wrapper">
+                        <ul id="ep-receptor"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-warn">
+                Para evitar banimentos, caso seu comentário contenha um spoiler,
+                comente-o entre a tag
+                <strong>&ltspoiler&gt &lt/spoiler&gt</strong> para que o
+                conteúdo dele fique oculto.
+            </div>
+            <!-- DISQUS SCRIPT -->
+            <div id="disqus_thread"></div>
+            <script>
+                /**
+                 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+                (function () {
+                    // DON'T EDIT BELOW THIS LINE
+                    var d = document,
+                        s = d.createElement("script");
+                    s.src = "https://localhost-eed0gwecyh.disqus.com/embed.js";
+                    s.setAttribute("data-timestamp", +new Date());
+                    (d.head || d.body).appendChild(s);
+                })();
+            </script>
+            <noscript
+                >Please enable JavaScript to view the
+                <a href="https://disqus.com/?ref_noscript"
+                    >comments powered by Disqus.</a
+                ></noscript
+            >
+
+            <script
+                id="dsq-count-scr"
+                src="//localhost-eed0gwecyh.disqus.com/count.js"
+                async
+            ></script>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <div class="header-wrapper">
+                <div class="left-side">
+                    <a href="index.html" class="logo"
+                        ><img src="images/logo.png" alt="teuanime.com"
+                    /></a>
+                    <a href="#">Contato</a>
+                    <a href="#">DMCA</a>
+                </div>
+                <a href="#" id="twitterLogo">
+                    <img src="images/twitter.svg" alt="twitter" />
+                </a>
+                <p>Animes Online Grátis em HD</p>
+            </div>
+        </footer>
+
+        <!-- Meu Script -->
+        <script src="main.js"></script>
+    </body>
+</html>

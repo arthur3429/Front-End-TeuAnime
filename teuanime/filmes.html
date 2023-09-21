@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Teu Anime - Animes Online Grátis</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body onload="alphabet()">
+        <!-- Header -->
+        <header>
+            <div class="header-wrapper">
+                <img
+                    src="images/lucide_menu.svg"
+                    alt="menu"
+                    id="menuIcon"
+                    onclick="showMenu()"
+                />
+                <a href="index.html" class="logo"
+                    ><img src="images/logo.png" alt="teuanime.com"
+                /></a>
+                <ul class="main-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li>
+                        <a href="animes.html">Lista de Animes</a>
+                    </li>
+                    <li class="active"><a href="filmes.html">Filmes</a></li>
+                    <li><a href="calendario.html">Calendário</a></li>
+                    <a id="closeBtn" onclick="hideMenu()"
+                        ><img src="images/ep_close-bold.svg" alt="x"
+                    /></a>
+                    <!-- NOTIFICAÇÃO -->
+                    <!-- <a id="notifyBtn">Ative as Notificações :) <img src="images/notificação.svg" alt=""></a> -->
+                </ul>
+                <!-- PROFILE AND SEARCH AREA -->
+                <div class="profile">
+                    <!-- SEARCH ICON -->
+                    <div id="search-icon" onclick="openSearchBar()">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="22"
+                            height="22"
+                        >
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path
+                                d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"
+                                fill="rgba(139,147,167,1)"
+                            />
+                        </svg>
+                    </div>
+                    <!-- NOTIFICAÇÃO NOTIFICATIONS/BELL ICON  -->
+
+                    <!-- <div id="notifyIcon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22"><path fill="none" d="M0 0h24v24H0z"/><path d="M22 20H2v-2h1v-6.969C3 6.043 7.03 2 12 2s9 4.043 9 9.031V18h1v2zM9.5 21h5a2.5 2.5 0 1 1-5 0z" fill="rgba(139,147,167,1)"/></svg>
+                </div> -->
+
+                    <!-- USER PROFILE -->
+                    <!-- <div class="user-profile">
+                <img src="images/rato.png" alt=":D">
+                <div class="user-profile-info">
+                    <p>Anonymous Dev</p>
+                    <span>Editar Perfil</span>
+                </div>
+            </div> -->
+                </div>
+            </div>
+        </header>
+        <!-- Search bar -->
+        <div class="search-bar">
+            <div id="search-form">
+                
+                    <input type="text" placeholder="Pesquisar animes..." />
+                    <div class="button centralizado">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            width="22"
+                            height="22"
+                        >
+                            <path fill="none" d="M0 0h24v24H0z" />
+                            <path
+                                d="M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z"
+                                fill="white"
+                            />
+                        </svg>
+                    </div>
+                    <div
+                        class="button centralizado"
+                        onclick="closeSearchBar()"
+                        id="SearchCloseBtn"
+                    >
+                        <img src="images/ep_close-bold.svg" alt="x" />
+                    </div>
+                
+            </div>
+            <div class="search-results">
+                <div class="result">
+                    <div class="anime-rating">
+                        <img src="images/bxs_star.svg" alt="star" />
+                        6.5 / 10
+                    </div>
+                    <div class="anime-image">
+                        <img src="images/image 3.png" alt="" />
+                    </div>
+                    <div class="result-info">
+                        <a href="#">Aharen-san wa Hakarenai</a>
+                        <span><h3 class="anime-status">em lançamento</h3></span>
+                        <div>
+                            <p class="anime-category">Escolar</p>
+                            <p class="anime-category">Comédia</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Ação</p>
+                        </div>
+
+                        <p class="anime-episodes">13 Episódios</p>
+                    </div>
+                </div>
+                <div class="result">
+                    <div class="anime-rating">
+                        <img src="images/bxs_star.svg" alt="star" />
+                        6.5 / 10
+                    </div>
+                    <div class="anime-image">
+                        <img src="images/image 3.png" alt="" />
+                    </div>
+                    <div class="result-info">
+                        <a href="#">Aharen-san wa Hakarenai</a>
+                        <span><h3 class="anime-status">em lançamento</h3></span>
+                        <div>
+                            <p class="anime-category">Escolar</p>
+                            <p class="anime-category">Comédia</p>
+                            <p class="anime-category">Fofura</p>
+                            <p class="anime-category">Ação</p>
+                        </div>
+
+                        <p class="anime-episodes">13 Episódios</p>
+                    </div>
+                </div>
+            </div>
+            <!-- <a id="notifyBtn">Ative as Notificações :) <img src="images/notificação.svg" alt=""></a> -->
+        </div>
+        <!-- website content -->
+        <div class="module animes-html">
+            <div class="abc-wrapper">
+                <ul class="abc">
+                    <li class="active">ALL</li>
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                    <li>D</li>
+                    <li>E</li>
+                    <li>F</li>
+                    <li>G</li>
+                    <li>H</li>
+                    <li>I</li>
+                    <li>J</li>
+                    <li>K</li>
+                    <li>L</li>
+                    <li>M</li>
+                    <li>N</li>
+                    <li>O</li>
+                    <li>P</li>
+                    <li>Q</li>
+                    <li>R</li>
+                    <li>S</li>
+                    <li>T</li>
+                    <li>U</li>
+                    <li>V</li>
+                    <li>W</li>
+                    <li>X</li>
+                    <li>Y</li>
+                    <li>Z</li>
+                </ul>
+            </div>
+            <div class="anime-list">
+                <header>
+                    <h1 class="border-left-blue">Lista de Animes</h1>
+                </header>
+                <div class="filters">
+        
+                    <div class="filter-result centralizado" id="filter-result">
+        
+                    </div>
+                    <div class="filter-wrapper">
+                        <ul class="filter-type">
+                            <p>Ordenar por:</p>
+                            <li class="active">Ordem Alfabética</li>
+                            <li>Mais Recentes</li>
+                            <li>Mais Antigos</li>
+                            <li>Melhor Avaliados</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Resultado dos filtros -->
+                <div class="filter-results">
+        
+                </div>
+        
+                <ul class="pagination">
+        
+                </ul>
+            </div>
+        </div>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <div class="header-wrapper">
+                <div class="left-side">
+                    <a href="index.html" class="logo"
+                        ><img src="images/logo.png" alt="teuanime.com"
+                    /></a>
+                    <a href="#">Contato</a>
+                    <a href="#">DMCA</a>
+                </div>
+                <a href="#" id="twitterLogo">
+                    <img src="images/twitter.svg" alt="twitter" />
+                </a>
+                <p>Animes Online Grátis em HD</p>
+            </div>
+        </footer>
+
+        <!-- jquery  -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- Meu Script -->
+        <script src="main.js"></script>
+        <!-- Script da lista de animes e filtros -->
+        <script src="js/lista-de-animes-e-filmes.js"></script>
+    </body>
+</html>
