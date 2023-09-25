@@ -2,7 +2,7 @@
 
 Bem-vindo ao repositório do front-end do TeuAnime, um projeto de site de animes incrível! Este repositório contém o código-fonte e os recursos necessários para a interface de usuário do TeuAnime, onde os fãs de anime podem explorar informações sobre seus animes favoritos, assistir a trailers, ler e escrever comentários e muito mais.
 
-<img src="">
+<img src="./screenshot.jpg">
 
 ## Visão Geral
 
